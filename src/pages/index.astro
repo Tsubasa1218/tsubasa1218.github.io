@@ -1,18 +1,18 @@
 ---
 import ExperienceEntry from '../components/ExperienceEntry.astro';
+import Skillset from '../components/Skillset.astro';
 import Layout from '../layouts/Layout.astro';
 
 const SAME = "Developed new features collaborating closely with other developers, Product Managers, UX Designers, and other stakeholders"
+const TCXT_TOOLS = "React, TypeScript, Java Spring, JSP, Docker, AWS, Atlassian Suite (Jira, Bitbucket, Confluence)"
 ---
 
 <Layout>
 	<header class="container">
 		<h1>Juan David Suaza Cruz</h1>
-		<p><b>Senior Software Engineer</b></p>
 		<p>
-			Experienced Front-end Engineer with a strong focus on React JS, Redux, TypeScript, and MobX. Highly motivated
-			by complex challenges, clean implementations, and thorough testing. Capable of using and exploring new technologies
-			in the JavaScript ecosystem or lower level languages like Rust, C++, and Zig, as well as recent AI tools such as LangChain.
+			I am a highly motivated Software Engineer with a strong foundation in software development principles and aptitude for mastering new technologies, including low-level programming languages and AI.
+			I am looking to solve complex challenges in a new domain with a team-centric mindset using Agile-inspired processes.
 		</p>
 	</header>
 
@@ -20,8 +20,13 @@ const SAME = "Developed new features collaborating closely with other developers
 
 	<main class="container">
 		<h2>Work Experience</h2>
+
+		<Skillset>
+			{TCXT_TOOLS}
+		</Skillset>
+
 		<ExperienceEntry place="TrueContext" title="Senior Software Engineer" date="June 2023 - May 2025">
-			<li>Led the development and redesign of the most active view of the Form Builder application</li>
+			<li>Led the development and redesign of the most active view of the Form Builder application, leading to a 30% reduction in LoC as well as the introduction of new multi-editing capabilities</li>
 			<li>Conducted customer interviews, resulting in several improvements to the UX in key areas of customer facing applications</li>
 			<li>Mentored new team members through pair programming sessions, code reviews, and in-person conversations</li>
 			<li>{SAME}</li>
@@ -39,6 +44,7 @@ const SAME = "Developed new features collaborating closely with other developers
 			<li>
 				Researched AI approaches to automatic form generation (see Education)
 			</li>
+
 		</ExperienceEntry>
 
 		<ExperienceEntry place="TrueContext" title="Software Engineer" date="July 2020 - May 2023">
@@ -46,8 +52,8 @@ const SAME = "Developed new features collaborating closely with other developers
 			<li>Developed API end-points and validation rules in the Java backend</li>
 			<li>Architected the component structure of a new application used for trial sign-ups</li>
 			<li>Continuously refactored our CI/CD pipelines to reduce re-run times after a failure</li>
-			<li>Reduced the bundle size of Web-based Forms application by 45% by refactoring the format of the in-house component library from CommonJS to ES Modules, as well as updating imports to improve tree-shaking of core libraries</li>
-			<li>Increased testing coverage of the Web-based Forms application from ~1K to ~10K tests by abstracting parameterized tests, resulting in near-zero escalations from 2021 to 2025</li>
+			<li>Reduced the bundle size of the web-based forms application by 45%, improving load times</li>
+			<li>Increased testing coverage of the web-based forms application from ~1K to ~10K tests by abstracting parameterized tests, resulting in near-zero escalations from 2021 to 2025</li>
 		</ExperienceEntry>
 
 		<ExperienceEntry place="TrueContext" title="Intern Software Engineer" date="July 2019 - June 2020">
@@ -59,24 +65,72 @@ const SAME = "Developed new features collaborating closely with other developers
 		<h2>Education</h2>
 		<ExperienceEntry place="Universidad del Valle, Cali, Colombia" title="MSc. Smart Application Development" date="2024 - Paused">
 			<li>Master's Project: parsing a form in a PDF or Image using AI tools like AWS Textract (or similar) to generate a JSON representation of it for further ingestion by TrueContext systems</li>
+			<Skillset>
+				Python, HuggingFace Transformers, AWS EC2, AWS Textract, Deno, Docker
+			</Skillset>
 		</ExperienceEntry>
 
 		<ExperienceEntry place="Universidad del Valle, Cali, Colombia" title="Systems Engineering" date="2014 - 2019">
 			<li>Developed a game in Unity to convey basic English vocabulary, focusing on gameplay driven by (Deep) Reinforcement Learning using Unity Agents and the <i>Asynchronous Advantage Actor-Critic</i> algorithm</li>
-			<li>Coordinator of the <a href="https://eisc.univalle.edu.co/index.php/grupos-investigacion/multimedia-y-vision-por-computador">Multimedia and Computer Vision</a> Research Group</li>
 			<li>Teaching Assistant of: Introduction to Programming, Numerical Methods, and Introduction to Digital Image Processing</li>
+			<li>Coordinator of the <a href="https://eisc.univalle.edu.co/index.php/grupos-investigacion/multimedia-y-vision-por-computador">Multimedia and Computer Vision</a> Research Group</li>
+			<Skillset>
+				Unity 3D and Unity Agents, Python, C#, Blender, PyTorch, SciLab, and C++
+			</Skillset>
 		</ExperienceEntry>
 
-		<h3>Publications</h2>
+		<h3>Publications</h3>
 		<ul>
-				<li>
-					Suaza, J., Gamboa, E., & Trujillo, M. (2019, November). A health point-based dynamic difficulty adjustment strategy for video games. In Joint International Conference on Entertainment Computing and Serious Games (pp. 436-440). Cham: Springer International Publishing.
-				</li>
-				<li>
-					Suaza, J., Salazar, J., Gamboa, E., & Trujillo, M. (2019). Tales of etrya: a digital game for motivating students to learn and rehearse English vocabulary. Ciencias Computing Memorias, 13, 264-280.
-				</li>
+			<li>
+				Suaza, J., Gamboa, E., & Trujillo, M. (2019, November). A health point-based dynamic difficulty adjustment strategy for video games. In Joint International Conference on Entertainment Computing and Serious Games (pp. 436-440). Cham: Springer International Publishing.
+			</li>
+			<li>
+				Suaza, J., Salazar, J., Gamboa, E., & Trujillo, M. (2019). Tales of etrya: a digital game for motivating students to learn and rehearse English vocabulary. Ciencias Computing Memorias, 13, 264-280.
+			</li>
+		</ul>
+
+		<hr />
+		<h2>Personal Projects</h2>
+
+		<ul>
+			<li>
+				<b>Airbus A320 Control for X-Plane 12</b>: Usage of X-Plane's websocket server to interact with an A320 simulation using a web application. The goal is to implement a physical button box using ESP32 modules. Also uses a vector database to look for Dataref and Action names in JSON responses
+
+				<Skillset>
+					LangChain, Deno, TypeScript, Svelte, and in the future, ESP32 with Rust or C for button boxes
+				</Skillset>
+			</li>
+
+			<li>
+				<b>Basic Conditional Logic Runtime</b>: Signal's based reactive system to update questions in THEN statements when IF statement predicates met
+
+				<Skillset>
+					C++21, CMake
+				</Skillset>
+			</li>
+
+			<li>
+				<b>Ray-tracing In One Weekend</b>: Translated the suggested C++ implemention into Zig as a learning exercise
+
+				<Skillset>
+					Zig
+				</Skillset>
+			</li>
+
+			<li>
+				<b>Flux Pattern</b>: Implemented the Flux pattern (used by ReduxJS) in Rust as a learning exercise to better understand the trade-offs of different Form Definition representations (normalized VS. nested)
+				<Skillset>
+					Rust
+				</Skillset>
+			</li>
+
+			<li>
+				<b>Air Quality Sensor</b>: Modified Arduino code to send air quality data to a Rust-based server for storage and further display in a dashboard-like UI
+				<Skillset>
+					Rust, Astro, SQLite, ESP32
+				</Skillset>
+			</li>
 		</ul>
 	</main>
 
-	<footer></footer>
 </Layout>
