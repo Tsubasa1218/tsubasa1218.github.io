@@ -1,14 +1,16 @@
 ---
-import ExperienceEntry from '../components/ExperienceEntry.astro';
-import Skillset from '../components/Skillset.astro';
-import Layout from '../layouts/Layout.astro';
+import ExperienceEntry from "../components/ExperienceEntry.astro";
+import Layout from "../layouts/Layout.astro";
 
-const SAME = "Developed new features collaborating closely with other developers, Product Managers, UX Designers, and other stakeholders"
-const TCXT_TOOLS = "React, TypeScript, Java Spring, JSP, Docker, AWS, Atlassian Suite (Jira, Bitbucket, Confluence)"
+const SAME =
+	"Developed new features collaborating closely with other developers, Product Managers, UX Designers, and other stakeholders";
+
+const TCXT_TOOLS =
+	"React, TypeScript, Java Spring, JSP, Docker, AWS, Atlassian Suite (Jira, Bitbucket, Confluence)";
 ---
 
 <Layout>
-	<header class="container">
+	<header>
 		<h1>Juan David Suaza Cruz</h1>
 		<p>
 			I am a highly motivated Software Engineer with a strong foundation in software development principles and aptitude for mastering new technologies, including low-level programming languages and AI.
@@ -16,33 +18,30 @@ const TCXT_TOOLS = "React, TypeScript, Java Spring, JSP, Docker, AWS, Atlassian 
 		</p>
 	</header>
 
-	<hr />
+		<hr />
 
-	<main class="container">
+	<main>
+		<h2>Skills</h2>
+		<ul>
+			<li><b>Professional Experience:</b> {TCXT_TOOLS}</li>
+			<li><b>Hobby Experience:</b> C++, Rust, Zig, Python, Google Cloud, Unity 3D, C#, LangChain, PyTorch, Hugging Face</li>
+		</ul>
+
+		<hr />
 		<h2>Work Experience</h2>
-
-		<Skillset>
-			{TCXT_TOOLS}
-		</Skillset>
-
 		<ExperienceEntry place="TrueContext" title="Senior Software Engineer" date="June 2023 - May 2025">
 			<li>Led the development and redesign of the most active view of the Form Builder application, leading to a 30% reduction in LoC as well as the introduction of new multi-editing capabilities</li>
 			<li>Conducted customer interviews, resulting in several improvements to the UX in key areas of customer facing applications</li>
 			<li>Mentored new team members through pair programming sessions, code reviews, and in-person conversations</li>
-			<li>{SAME}</li>
 			<li>
 				Focused heavily on improving the DX by actively updating (and/or removing) libraries, notably:
-				<ol>
-					<li>"Classic" Redux to Redux Toolkit, resulting in a 35% reduction in LoC</li>
+				<ul>
+					<li>Redux to Redux Toolkit, resulting in a 35% reduction in LoC and a streamlined reducer coding style</li>
 					<li>Webpack to Vite, ESBuild, and Rollup, leading to millisecond start-up and hot-reload times and introduction of TypeScript into the codebases</li>
-					<li>Jest to Vitest, removing the need for Jest-specific libraries to handle TypeScript transpilation</li>
-				</ol>
+				</ul>
 			</li>
 			<li>
-				Researched methods to improve and simplify our existing React and JSP front-ends
-			</li>
-			<li>
-				Researched AI approaches to automatic form generation (see Education)
+				Researched methods to improve and simplify our existing React and JSP front-ends, as well as AI solutions to automatic form generation (see Education)
 			</li>
 
 		</ExperienceEntry>
@@ -51,9 +50,9 @@ const TCXT_TOOLS = "React, TypeScript, Java Spring, JSP, Docker, AWS, Atlassian 
 			<li>{SAME}</li>
 			<li>Developed API end-points and validation rules in the Java backend</li>
 			<li>Architected the component structure of a new application used for trial sign-ups</li>
-			<li>Continuously refactored our CI/CD pipelines to reduce re-run times after a failure</li>
-			<li>Reduced the bundle size of the web-based forms application by 45%, improving load times</li>
-			<li>Increased testing coverage of the web-based forms application from ~1K to ~10K tests by abstracting parameterized tests, resulting in near-zero escalations from 2021 to 2025</li>
+			<li>Continuously refactored our CI/CD pipelines to reduce re-run times after failures</li>
+			<li>Reduced the bundle size of web-based forms by 45%, improving load times</li>
+			<li>Increased testing coverage of web-based forms from ~1K to ~10K tests by abstracting parameterized tests, resulting in near-zero escalations from 2021 to 2025</li>
 		</ExperienceEntry>
 
 		<ExperienceEntry place="TrueContext" title="Intern Software Engineer" date="July 2019 - June 2020">
@@ -64,19 +63,13 @@ const TCXT_TOOLS = "React, TypeScript, Java Spring, JSP, Docker, AWS, Atlassian 
 
 		<h2>Education</h2>
 		<ExperienceEntry place="Universidad del Valle, Cali, Colombia" title="MSc. Smart Application Development" date="2024 - Paused">
-			<li>Master's Project: parsing a form in a PDF or Image using AI tools like AWS Textract (or similar) to generate a JSON representation of it for further ingestion by TrueContext systems</li>
-			<Skillset>
-				Python, HuggingFace Transformers, AWS EC2, AWS Textract, Deno, Docker
-			</Skillset>
+			<li><b>Project</b>: parsing a form in a PDF or Image using AI tools like AWS Textract (and/or Hugging Face) to generate a JSON representation of it for further ingestion by TrueContext systems</li>
 		</ExperienceEntry>
 
 		<ExperienceEntry place="Universidad del Valle, Cali, Colombia" title="Systems Engineering" date="2014 - 2019">
-			<li>Developed a game in Unity to convey basic English vocabulary, focusing on gameplay driven by (Deep) Reinforcement Learning using Unity Agents and the <i>Asynchronous Advantage Actor-Critic</i> algorithm</li>
-			<li>Teaching Assistant of: Introduction to Programming, Numerical Methods, and Introduction to Digital Image Processing</li>
+			<li>Developed a game in Unity 3D to convey basic English vocabulary, focusing on gameplay driven by (Deep) Reinforcement Learning using Unity Agents (C#) and the <i>Asynchronous Advantage Actor-Critic</i> algorithm (Python), as well as simpler methods like heuristics</li>
+			<li>Teaching Assistant of: Introduction to Programming (Python, Ruby), Numerical Methods (C++, SciLab), and Introduction to Digital Image Processing (C++, Java)</li>
 			<li>Coordinator of the <a href="https://eisc.univalle.edu.co/index.php/grupos-investigacion/multimedia-y-vision-por-computador">Multimedia and Computer Vision</a> Research Group</li>
-			<Skillset>
-				Unity 3D and Unity Agents, Python, C#, Blender, PyTorch, SciLab, and C++
-			</Skillset>
 		</ExperienceEntry>
 
 		<h3>Publications</h3>
@@ -94,41 +87,23 @@ const TCXT_TOOLS = "React, TypeScript, Java Spring, JSP, Docker, AWS, Atlassian 
 
 		<ul>
 			<li>
-				<b>Airbus A320 Control for X-Plane 12</b>: Usage of X-Plane's websocket server to interact with an A320 simulation using a web application. The goal is to implement a physical button box using ESP32 modules. Also uses a vector database to look for Dataref and Action names in JSON responses
-
-				<Skillset>
-					LangChain, Deno, TypeScript, Svelte, and in the future, ESP32 with Rust or C for button boxes
-				</Skillset>
+				<b>Airbus A320 Control for X-Plane 12</b>: Usage of X-Plane's websocket server to interact with an A320 simulation using a web application built in Svelte. The goal is to create a physical button box using ESP32 modules and the newer Rust HAL. Also uses LangChain to create and query a vector database containing all the information provided by the simulator
 			</li>
 
 			<li>
-				<b>Basic Conditional Logic Runtime</b>: Signal's based reactive system to update questions in THEN statements when IF statement predicates met
-
-				<Skillset>
-					C++21, CMake
-				</Skillset>
+				<b>Basic Conditional Logic Runtime</b>: Signal's based reactive system in C++21 to update questions in THEN statements when IF statement predicates met
 			</li>
 
 			<li>
 				<b>Ray-tracing In One Weekend</b>: Translated the suggested C++ implemention into Zig as a learning exercise
-
-				<Skillset>
-					Zig
-				</Skillset>
 			</li>
 
 			<li>
-				<b>Flux Pattern</b>: Implemented the Flux pattern (used by ReduxJS) in Rust as a learning exercise to better understand the trade-offs of different Form Definition representations (normalized VS. nested)
-				<Skillset>
-					Rust
-				</Skillset>
+				<b>Flux Pattern</b>: Implemented the Flux pattern (used by ReduxJS) in Rust as a learning exercise to better understand the trade-offs of different Form Definition representations
 			</li>
 
 			<li>
-				<b>Air Quality Sensor</b>: Modified Arduino code to send air quality data to a self-hosted Rust-based server for storage and further display in a dashboard-like UI
-				<Skillset>
-					Rust, Astro, SQLite, ESP32, Arduino, Raspberry PI
-				</Skillset>
+				<b>Air Quality Sensor</b>: Modified sample Arduino code to send air quality data to a self-hosted Rust-based server for storage - using SQLite - and further display in a dashboard-like UI
 			</li>
 		</ul>
 	</main>
