@@ -1,11 +1,82 @@
 ---
-import Welcome from '../components/Welcome.astro';
+import ExperienceEntry from '../components/ExperienceEntry.astro';
 import Layout from '../layouts/Layout.astro';
 
-// Welcome to Astro! Wondering what to do next? Check out the Astro documentation at https://docs.astro.build
-// Don't want to use any of this? Delete everything in this file, the `assets`, `components`, and `layouts` directories, and start fresh.
+const SAME = "Developed new features collaborating closely with other developers, Product Managers, UX Designers, and other stakeholders"
 ---
 
 <Layout>
-	<Welcome />
+	<header class="container">
+		<h1>Juan David Suaza Cruz</h1>
+		<p><b>Senior Software Engineer</b></p>
+		<p>
+			Experienced Front-end Engineer with a strong focus on React JS, Redux, TypeScript, and MobX. Highly motivated
+			by complex challenges, clean implementations, and thorough testing. Capable of using and exploring new technologies
+			in the JavaScript ecosystem or lower level languages like Rust, C++, and Zig, as well as recent AI tools such as LangChain.
+		</p>
+	</header>
+
+	<hr />
+
+	<main class="container">
+		<h2>Work Experience</h2>
+		<ExperienceEntry place="TrueContext" title="Senior Software Engineer" date="June 2023 - May 2025">
+			<li>Led the development and redesign of the most active view of the Form Builder application</li>
+			<li>Conducted customer interviews, resulting in several improvements to the UX in key areas of customer facing applications</li>
+			<li>Mentored new team members through pair programming sessions, code reviews, and in-person conversations</li>
+			<li>{SAME}</li>
+			<li>
+				Focused heavily on improving the DX by actively updating (and/or removing) libraries, notably:
+				<ol>
+					<li>"Classic" Redux to Redux Toolkit, resulting in a 35% reduction in LoC</li>
+					<li>Webpack to Vite, ESBuild, and Rollup, leading to millisecond start-up and hot-reload times and introduction of TypeScript into the codebases</li>
+					<li>Jest to Vitest, removing the need for Jest-specific libraries to handle TypeScript transpilation</li>
+				</ol>
+			</li>
+			<li>
+				Researched methods to improve and simplify our existing React and JSP front-ends
+			</li>
+			<li>
+				Researched AI approaches to automatic form generation (see Education)
+			</li>
+		</ExperienceEntry>
+
+		<ExperienceEntry place="TrueContext" title="Software Engineer" date="July 2020 - May 2023">
+			<li>{SAME}</li>
+			<li>Developed API end-points and validation rules in the Java backend</li>
+			<li>Architected the component structure of a new application used for trial sign-ups</li>
+			<li>Continuously refactored our CI/CD pipelines to reduce re-run times after a failure</li>
+			<li>Reduced the bundle size of Web-based Forms application by 45% by refactoring the format of the in-house component library from CommonJS to ES Modules, as well as updating imports to improve tree-shaking of core libraries</li>
+			<li>Increased testing coverage of the Web-based Forms application from ~1K to ~10K tests by abstracting parameterized tests, resulting in near-zero escalations from 2021 to 2025</li>
+		</ExperienceEntry>
+
+		<ExperienceEntry place="TrueContext" title="Intern Software Engineer" date="July 2019 - June 2020">
+			<li>{SAME}</li>
+		</ExperienceEntry>
+
+		<hr />
+
+		<h2>Education</h2>
+		<ExperienceEntry place="Universidad del Valle, Cali, Colombia" title="MSc. Smart Application Development" date="2024 - Paused">
+			<li>Master's Project: parsing a form in a PDF or Image using AI tools like AWS Textract (or similar) to generate a JSON representation of it for further ingestion by TrueContext systems</li>
+		</ExperienceEntry>
+
+		<ExperienceEntry place="Universidad del Valle, Cali, Colombia" title="Systems Engineering" date="2014 - 2019">
+			<li>Developed a game in Unity to convey basic English vocabulary, focusing on gameplay driven by (Deep) Reinforcement Learning using Unity Agents and the <i>Asynchronous Advantage Actor-Critic</i> algorithm</li>
+			<li>Coordinator of the <a href="https://eisc.univalle.edu.co/index.php/grupos-investigacion/multimedia-y-vision-por-computador">Multimedia and Computer Vision</a> Research Group</li>
+			<li>Teaching Assistant of: Introduction to Programming, Numerical Methods, and Introduction to Digital Image Processing</li>
+		</ExperienceEntry>
+
+		<h3>Publications</h2>
+		<ul>
+				<li>
+					Suaza, J., Gamboa, E., & Trujillo, M. (2019, November). A health point-based dynamic difficulty adjustment strategy for video games. In Joint International Conference on Entertainment Computing and Serious Games (pp. 436-440). Cham: Springer International Publishing.
+				</li>
+				<li>
+					Suaza, J., Salazar, J., Gamboa, E., & Trujillo, M. (2019). Tales of etrya: a digital game for motivating students to learn and rehearse English vocabulary. Ciencias Computing Memorias, 13, 264-280.
+				</li>
+		</ul>
+	</main>
+
+	<footer></footer>
 </Layout>
