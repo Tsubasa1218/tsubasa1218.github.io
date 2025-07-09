@@ -1,0 +1,24 @@
+---
+
+import { Picture } from "astro:assets";
+
+import Layout from "../layouts/Layout.astro";
+
+const photos = await Astro.glob("/src/assets/nature/*");
+---
+
+<Layout title="Flight Simulation - JDSC">
+	<header>
+		<h1>Cool photos</h1>
+	</header>
+	<main class="full-width">
+    {photos.map(photo => <Picture src={photo.default} alt="" quality="mid" loading="eager" width={photo.default.width / 4} height={photo.default.height / 4} />)}
+  </main>
+</Layout>
+
+<style>
+  .full-width {
+    margin-inline: calc(50% - 49vw);
+    column-count: 3;
+  }
+</style>

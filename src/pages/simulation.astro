@@ -1,0 +1,78 @@
+---
+
+import { Image } from "astro:assets";
+
+import A350 from "../assets/a350.png";
+import A350Landing from "../assets/a350-landing.png";
+import A350Window from "../assets/a350-window.png";
+import B738 from "../assets/b738.png";
+import Setup from "../assets/setup.jpeg";
+import Layout from "../layouts/Layout.astro";
+---
+
+<Layout title="Flight Simulation - JDSC">
+	<header>
+		<h1>I love airplanes ❤️</h1>
+	</header>
+
+	<main>
+		<blockquote>The FAA prohibits me from showing you my terrible landings. And yes, in case of an emergency, "I can definitely land an A320" :p</blockquote>
+		<section>
+			<h2>What I fly with</h2>
+			<p>I mostly fly on X Plane 12, and ocasionally iniBuilds A350 on Microsoft Flight Simulator 2024. Here are my specs</p>
+			<ul>
+		  	<li>CPU: Ryzen 9 7900X</li>
+		  	<li>GPU: Nvidia RTX 4090 (MSI Supreme, the watercooled one)</li>
+		  	<li>RAM: 32 GB DDR5</li>
+		  	<li>Main monitor: LG 34" Ultrawide, 144Hz, 1440p</li>
+		  	<li>Instrument monitor: cheap 10" from Amazon</li>
+		  	<li>WinWing's MCDU, FCU, and Capt. EFIS</li>
+		  	<li>Java Simulator mini overhead panel</li>
+		  	<li>Fullcrum Yoke</li>
+		  	<li>Thrustmaster HOTAS Warthog with <a href="https://www.fsprojects.eu/">FS Projects A320 side stick replica</a></li>
+		  	<li>Thrustmaster T-Rudder pedals</li>
+			</ul>
+
+			<figure>
+				<Image src={Setup} alt="Photo of my cockpit setup"/>
+				<figcaption>My "cockpit"</figcaption>
+			</figure>
+		</section>
+
+		<section>
+			<h2>What I fly</h2>
+			<ol>
+		  	<li>Toliss A319 (XP12)</li>
+		  	<li>Toliss A321 NEO (XP12)</li>
+		  	<li>iniBuilds A350 (MSFS24)</li>
+		  	<li>Zibo 737 (XP12)</li>
+			</ol>
+		</section>
+
+
+		<section>
+
+			<h2>Some screenshots</h2>
+
+			<figure>
+				<Image src={A350} alt="iniBuilds A350 centre pedestal"/>
+				<figcaption>iniBuild's A350 centre pedestal</figcaption>
+			</figure>
+
+			<hr />
+
+			<figure>
+				<Image src={A350Window} alt="View of Singapore (WSSS) from an A350"/>
+				<Image src={A350Landing} alt="View of A350 during landing"/>
+				<figcaption>A350 KJFK-WSSS. Landing after 17 - <u>real</u> - hours</figcaption>
+			</figure>
+
+			<hr />
+
+			<figure>
+				<Image src={B738} alt="Crashes 737 at Madeira"/>
+				<figcaption>At Madeira, Funchal Intl (LPMA). I have a hard time flying the 737...nothing to worry about</figcaption>
+			</figure>
+		</section>
+	</main>
+</Layout>
