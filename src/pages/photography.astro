@@ -5,6 +5,7 @@ import { Picture } from "astro:assets";
 import Layout from "../layouts/Layout.astro";
 
 const photos = await Astro.glob("/src/assets/nature/*");
+const RATE = 4;
 ---
 
 <Layout title="Flight Simulation - JDSC">
@@ -12,7 +13,7 @@ const photos = await Astro.glob("/src/assets/nature/*");
 		<h1>Cool photos</h1>
 	</header>
 	<main class="full-width">
-    {photos.map(photo => <Picture src={photo.default} alt="" quality="mid" loading="eager" width={photo.default.width / 4} height={photo.default.height / 4} />)}
+    {photos.map(photo => <Picture src={photo.default} alt="" quality="high" loading="eager" width={photo.default.width / RATE} height={photo.default.height / RATE} />)}
   </main>
 </Layout>
 
