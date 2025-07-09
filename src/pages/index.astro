@@ -6,35 +6,37 @@ const SAME =
 	"Developed new features collaborating closely with other developers, Product Managers, UX Designers, and other stakeholders";
 
 const TCXT_TOOLS =
-	"React, TypeScript, Java Spring, JSP, Docker, AWS, Atlassian Suite (Jira, Bitbucket, Confluence)";
+	"React, TypeScript, Java Spring, JSP, Docker, AWS, Atlassian Suite (Jira, Bitbucket, Confluence), Git";
 ---
 
 <Layout>
 	<header>
 		<h1>Juan David Suaza Cruz</h1>
 		<p>
-			I am a highly motivated Software Engineer with a strong foundation in software development principles and aptitude for mastering new technologies, including low-level programming languages and AI.
-			I am looking to solve complex challenges in a new domain with a team-centric mindset using Agile-inspired processes.
+			Highly motivated Software Engineer with a strong foundation in software development principles and aptitude for mastering new technologies, including low-level programming languages and AI.
+			Looking to solve complex challenges in a new domain with a team-centric mindset using Agile-inspired processes.
 		</p>
 	</header>
 
 		<hr />
 
 	<main>
-		<h2>Skills</h2>
+
+		<h2>Programming Languages and Tools</h2>
 		<ul>
 			<li><b>Professional Experience:</b> {TCXT_TOOLS}</li>
 			<li><b>Hobby Experience:</b> C++, Rust, Zig, Python, Google Cloud, Unity 3D, C#, LangChain, PyTorch, Hugging Face</li>
 		</ul>
 
 		<hr />
+
 		<h2>Work Experience</h2>
 		<ExperienceEntry place="TrueContext" title="Senior Software Engineer" date="June 2023 - May 2025">
 			<li>Led the development and redesign of the most active view of the Form Builder application, leading to a 30% reduction in LoC as well as the introduction of new multi-editing capabilities</li>
 			<li>Conducted customer interviews, resulting in several improvements to the UX in key areas of customer facing applications</li>
 			<li>Mentored new team members through pair programming sessions, code reviews, and in-person conversations</li>
 			<li>
-				Focused heavily on improving the DX by actively updating (and/or removing) libraries, notably:
+				Focused heavily on improving the DX, notably:
 				<ul>
 					<li>Redux to Redux Toolkit, resulting in a 35% reduction in LoC and a streamlined reducer coding style</li>
 					<li>Webpack to Vite, ESBuild, and Rollup, leading to millisecond start-up and hot-reload times and introduction of TypeScript into the codebases</li>
@@ -47,12 +49,15 @@ const TCXT_TOOLS =
 		</ExperienceEntry>
 
 		<ExperienceEntry place="TrueContext" title="Software Engineer" date="July 2020 - May 2023">
-			<li>{SAME}</li>
-			<li>Developed API end-points and validation rules in the Java backend</li>
-			<li>Architected the component structure of a new application used for trial sign-ups</li>
-			<li>Continuously refactored our CI/CD pipelines to reduce re-run times after failures</li>
-			<li>Reduced the bundle size of web-based forms by 45%, improving load times</li>
-			<li>Increased testing coverage of web-based forms from ~1K to ~10K tests by abstracting parameterized tests, resulting in near-zero escalations from 2021 to 2025</li>
+			<li>Contributed actively to the Java backend, developing API end-points, serializers, and validation rules</li>
+			<li>
+				Focused on performance and robustness, notably:
+				<ul>
+					<li>Improved loading times by 50% by refactoring the build process of the in-house component library</li>
+					<li>Increased testing coverage from ~1K to ~10K tests by abstracting parameterized tests, resulting in near-zero escalations since 2021</li>
+					<li>Continuously refactored our CI/CD pipelines to reduce times and isolate flaky tests</li>
+				</ul>
+			</li>
 		</ExperienceEntry>
 
 		<ExperienceEntry place="TrueContext" title="Intern Software Engineer" date="July 2019 - June 2020">
@@ -67,7 +72,7 @@ const TCXT_TOOLS =
 		</ExperienceEntry>
 
 		<ExperienceEntry place="Universidad del Valle, Cali, Colombia" title="Systems Engineering" date="2014 - 2019">
-			<li>Developed a game in Unity 3D to convey basic English vocabulary, focusing on gameplay driven by (Deep) Reinforcement Learning using Unity Agents (C#) and the <i>Asynchronous Advantage Actor-Critic</i> algorithm (Python), as well as simpler methods like heuristics</li>
+			<li>Developed a game in Unity 3D to convey basic English vocabulary, attempting to use the <i>Asynchronous Advantage Actor-Critic</i> Deep Reinforcement Learning algorithm (Python), as well as simpler methods like heuristics to drive enemy behaviours</li>
 			<li>Teaching Assistant of: Introduction to Programming (Python, Ruby), Numerical Methods (C++, SciLab), and Introduction to Digital Image Processing (C++, Java)</li>
 			<li>Coordinator of the <a href="https://eisc.univalle.edu.co/index.php/grupos-investigacion/multimedia-y-vision-por-computador">Multimedia and Computer Vision</a> Research Group</li>
 		</ExperienceEntry>
@@ -75,10 +80,10 @@ const TCXT_TOOLS =
 		<h3>Publications</h3>
 		<ul>
 			<li>
-				Suaza, J., Gamboa, E., & Trujillo, M. (2019, November). A health point-based dynamic difficulty adjustment strategy for video games. In Joint International Conference on Entertainment Computing and Serious Games (pp. 436-440). Cham: Springer International Publishing.
+				<a href="https://link.springer.com/chapter/10.1007/978-3-030-34644-7_42">A health point-based dynamic difficulty adjustment strategy for video games</a>
 			</li>
 			<li>
-				Suaza, J., Salazar, J., Gamboa, E., & Trujillo, M. (2019). Tales of etrya: a digital game for motivating students to learn and rehearse English vocabulary. Ciencias Computing Memorias, 13, 264-280.
+				<a href="https://www.researchgate.net/publication/333248932_Tales_of_Etrya_A_Digital_Game_for_Motivating_Students_to_Learn_and_Rehearse_English_Vocabulary">Tales of Etrya: A Digital Game for Motivating Students to Learn and Rehearse English Vocabulary</a>
 			</li>
 		</ul>
 
@@ -91,19 +96,19 @@ const TCXT_TOOLS =
 			</li>
 
 			<li>
-				<b>Basic Conditional Logic Runtime</b>: Signal's based reactive system in C++21 to update questions in THEN statements when IF statement predicates met
+				<b>Basic Conditional Logic Runtime</b>: Signal's based reactive system in C++21 to update question answers in THEN statements when IF statement predicates met
 			</li>
 
 			<li>
-				<b>Ray-tracing In One Weekend</b>: Translated the suggested C++ implemention into Zig as a learning exercise
+				<b>Ray-tracing In One Weekend</b>: Implemented in Zig as a learning exercise
 			</li>
 
 			<li>
-				<b>Flux Pattern</b>: Implemented the Flux pattern (used by ReduxJS) in Rust as a learning exercise to better understand the trade-offs of different Form Definition representations
+				<b>Form Storage</b>: Implemented a system similar to ReduxJS in Rust as a learning exercise
 			</li>
 
 			<li>
-				<b>Air Quality Sensor</b>: Modified sample Arduino code to send air quality data to a self-hosted Rust-based server for storage - using SQLite - and further display in a dashboard-like UI
+				<b>Air Quality Sensor</b>: Modified sample Arduino code to capture air quality data to a self-hosted Rust-based server for storage (SQLite) and further display in a dashboard-like UI
 			</li>
 		</ul>
 	</main>
