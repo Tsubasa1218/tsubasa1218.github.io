@@ -4,6 +4,7 @@ interface Props {
 }
 
 const { title } = Astro.props;
+
 ---
 <!doctype html>
 <html lang="en">
@@ -17,7 +18,7 @@ const { title } = Astro.props;
 	</head>
 	<body>
 		<nav>
-			[<a href="/">cd /</a> | <a href="/resume">Resume</a> | <a href="/photography">Photography</a> | <a href="/simulation">Flight Simulation</a>]
+			[<a href="/website">cd /</a> | <a href="/website/resume">Resume</a> | <a href="/website/photography">Photography</a> | <a href="/website/simulation">Flight Simulation</a>]
 		</nav>
 		<slot />
 	</body>
