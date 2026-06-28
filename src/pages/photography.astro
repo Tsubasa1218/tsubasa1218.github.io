@@ -1,25 +1,38 @@
 ---
-
 import { Picture } from "astro:assets";
+import type { ImageMetadata } from "astro";
 
 import Layout from "../layouts/Layout.astro";
+import { imageMetadata } from "astro/assets/utils";
 
-const photos = await Astro.glob("/src/assets/nature/*");
+const photos = import.meta.glob<{ default: ImageMetadata }>(
+    "/src/assets/nature/*",
+    { eager: true },
+);
 const RATE = 4;
 ---
 
 <Layout title="Flight Simulation - JDSC">
-	<header>
-		<h1>Cool photos</h1>
-	</header>
-	<main class="full-width">
-    {photos.map(photo => <Picture src={photo.default} alt="" quality="high" loading="eager" width={photo.default.width / RATE} height={photo.default.height / RATE} />)}
-  </main>
+    <header>
+        <h1>Cool photos</h1>
+    </header>
+    <main class="full-width">
+        {
+            Object.values(photos).map((photo) => (
+                <Picture
+                    src={photo.default}
+                    alt=""
+                    width={photo.default.width / RATE}
+                    height={photo.default.height / RATE}
+                />
+            ))
+        }
+    </main>
 </Layout>
 
 <style>
-  .full-width {
-    margin-inline: calc(50% - 49vw);
-    column-count: 3;
-  }
+    .full-width {
+        margin-inline: calc(50% - 49vw);
+        column-count: 3;
+    }
 </style>
